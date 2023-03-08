@@ -5,8 +5,15 @@ from pathlib import Path
 
 #Functions
 
+
+##
+###  Calculates Present Value given Future Value, Interest Rate & # of Months
+##
 def pv( fv, rate, months):
         return( fv /  ( (1+(rate/12) )**months))
+
+
+##  Calculates Present Value given Future Value, Interest Rate & # of Years
 
 
 def pvAnnual( fv, rate, years):
@@ -23,6 +30,10 @@ First, let's start with some calculations on a list of prices for 5 loans.
     3. Using the sum of all loans and the total number of loans, calculate the average loan price.
     4. Print all calculations with descriptive messages.
 """
+
+print(f"\n###Part 1###\n")
+
+
 loan_costs = [500, 600, 200, 1000, 450]
 
 # How many loans are in the list?
@@ -45,8 +56,6 @@ loan_sum = sum(loan_costs)
 # YOUR CODE HERE!
 
 loan_average = loan_sum / loan_count
-
-print(f"\n###Part 1###\n")
 
 
 print(f"The loan count is {loan_count}, the sum of the loans is {loan_sum} and the average is {loan_average:.2f}\n")
@@ -75,6 +84,8 @@ Using more detailed data on one of these loans, follow these steps to calculate 
 """
 
 
+print(f"\n###Part 2###\n")
+
 # Given the following loan data, you will need to calculate the present value for the loan
 loan = {
     "loan_price": 500,
@@ -87,8 +98,6 @@ loan = {
 # Print each variable.
 # YOUR CODE HERE!
 
-
-print(f"\n###Part 2###\n")
 
 future_value = loan.get("future_value")
 remaining_months = loan.get("remaining_months")
@@ -128,6 +137,8 @@ Perform financial calculations using functions.
     a. Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 """
 
+print(f"\n###Part 3###\n")
+
 # Given the following loan data, you will need to calculate the present value for the loan
 new_loan = {
     "loan_price": 800,
@@ -141,11 +152,8 @@ new_loan = {
 #    The function should return the `present_value` for the loan.
 # YOUR CODE HERE!
 
-print(f"\n###Part 3###\n")
 
-
-# See functions at top
-
+### FUNCTION DEFINED AT TOP OF FILE ( SEE ABOVE )
 
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
@@ -234,7 +242,7 @@ Output this list of inexpensive loans to a csv file
 
 """
 
-print(f"\n###Part 5###\n")
+print(f"\n###Part 5###\n (No terminal output) - See inexpensive_loans.csv")
 
 # Set the output header
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
