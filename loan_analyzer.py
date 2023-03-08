@@ -45,10 +45,10 @@ loan_sum = sum(loan_costs)
 
 loan_average = loan_sum / loan_count
 
-print(f"\n\n###Part 1###\n\n")
+print(f"\n###Part 1###\n")
 
 
-print(f"The loan count is {loan_count}, the sum of the loans is {loan_sum} and the average is {loan_average:.2f}\n\n")
+print(f"The loan count is {loan_count}, the sum of the loans is {loan_sum} and the average is {loan_average:.2f}\n")
 
 """Part 2: Analyze Loan Data.
 
@@ -87,7 +87,7 @@ loan = {
 # YOUR CODE HERE!
 
 
-print(f"\n\n###Part 2###\n\n")
+print(f"\n###Part 2###\n")
 
 future_value = loan.get("future_value")
 remaining_months = loan.get("remaining_months")
@@ -140,7 +140,7 @@ new_loan = {
 #    The function should return the `present_value` for the loan.
 # YOUR CODE HERE!
 
-print(f"\n\n###Part 3###\n\n")
+print(f"\n###Part 3###\n")
 
 
 # See functions at top
@@ -197,7 +197,7 @@ loans = [
 # @TODO: Create an empty list called `inexpensive_loans`
 # YOUR CODE HERE!
 
-print(f"\n\n###Part 4###\n\n")
+print(f"\n###Part 4###\n")
 
 inexpensive_loans = []
 
@@ -233,7 +233,7 @@ Output this list of inexpensive loans to a csv file
 
 """
 
-print(f"\n\n###Part 5###\n\n")
+print(f"\n###Part 5###\n")
 
 # Set the output header
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
@@ -254,3 +254,8 @@ with open(output_path, 'w', newline='') as csvfile:
           csvwriter.writerow( loan_test.values())
 
 
+#if __name__ == "__main__":
+#    def some_function():
+#          return
+#    
+#    some_function()
